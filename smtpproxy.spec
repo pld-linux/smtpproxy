@@ -1,5 +1,5 @@
-Summary:	smtp.proxy is an application level gateway for the SMTP protocol
-Summary(pl):	smtp.proxy jest aplikacyjn± bramk± dla protoko³u SMTP
+Summary:	An application level gateway for the SMTP protocol
+Summary(pl):	Brama warstwy aplikacji dla protoko³u SMTP
 Name:		smtpproxy
 Version:	1.1.3
 Release:	3
