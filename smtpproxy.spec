@@ -41,7 +41,6 @@ install smtp.proxy.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/smtpproxy
 
-gzip -9nf README rfc821.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,7 +59,7 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README rfc821.txt
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/rc-inetd/smtpproxy
 %attr(755,root,root) %{_sbindir}/smtp.proxy
 %{_mandir}/man1/*
