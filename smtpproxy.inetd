@@ -1,0 +1,9 @@
+SERVICE_NAME=smtpproxy
+SOCK_TYPE=stream
+PROTOCOL=tcp
+PORT=10025
+FLAGS=nowait
+USER=nobody
+SERVER=tcpd
+DAEMON=/usr/sbin/smtp.proxy
+DAEMONARGS="-t 30"
