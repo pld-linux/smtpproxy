@@ -30,7 +30,7 @@ sprawdzaj±c czy klient i serwer spe³niaj± specyfikacjê protoko³u (RFC
 
 %build
 %{__make} \
-	CC=%{__cc} \
+	CC="%{__cc}" \
 	CFLAGS="%{rpmcflags}"
 
 %install
@@ -41,7 +41,6 @@ install smtp.proxy $RPM_BUILD_ROOT%{_sbindir}
 install smtp.proxy.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/smtpproxy
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
