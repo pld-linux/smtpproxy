@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/Networking
 Source0:	http://www.quietsche-entchen.de/download/%{name}-%{version}.tar.gz
+# Source0-md5:	c4558c8d379644e5b1fd66c389107a1e
 Source1:	%{name}.inetd
 Prereq:		rc-inetd >= 0.8.1
 URL:		http://www.quietsche-entchen.de/software/smtp.proxy.html
