@@ -50,19 +50,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 if [ -f /var/lock/subsys/rc-inetd ]; then
-    /etc/rc.d/init.d/rc-inetd reload 1>&2
+	/etc/rc.d/init.d/rc-inetd reload 1>&2
 else
-    echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start inet server" 1>&2
+	echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start inet server" 1>&2
 fi
 
 %postun
 if [ "$1" = "0" -a -f /var/lock/subsys/rc-inetd ]; then
-    /etc/rc.d/init.d/rc-inetd reload
+	/etc/rc.d/init.d/rc-inetd reload
 fi
     
 %files
 %defattr(644,root,root,755)
 %doc *.gz
+%attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/rc-inetd/smtpproxy
 %attr(755,root,root) %{_sbindir}/smtp.proxy
 %{_mandir}/man1/*
-%attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/rc-inetd/smtpproxy
