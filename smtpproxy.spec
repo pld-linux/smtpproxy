@@ -5,8 +5,6 @@ Version:	1.1.3
 Release:	2
 License:	GPL
 Group:		Applications/Networking
-Group(de):	Applikationen/Netzwerkwesen
-Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.quietsche-entchen.de/download/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Prereq:		rc-inetd >= 0.8.1
