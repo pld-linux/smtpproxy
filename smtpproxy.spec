@@ -12,6 +12,7 @@ Source1:	%{name}.inetd
 Prereq:		rc-inetd >= 0.8.1
 URL:		http://www.quietsche-entchen.de/software/smtp.proxy.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Conflicts:	proxytools
 
 %description
 smtp.proxy is an application level gateway for the SMTP protocol based
@@ -21,8 +22,8 @@ the data streams it forward and watches over the protocol.
 
 %description -l pl
 smtp.proxy jest aplikacyjn± bramk± dla protoko³u SMTP. W odró¿nieniu
-od innych tego typu programów, pop3proxy nadzoruje transmisje
-sprawdzaj±c czy klient i serwer spe³niaj± specyfikacje protoko³u (RFC
+od innych tego typu programów, smtpproxy nadzoruje transmisjê
+sprawdzaj±c czy klient i serwer spe³niaj± specyfikacjê protoko³u (RFC
 821).
 
 %prep
