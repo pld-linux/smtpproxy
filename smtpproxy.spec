@@ -2,7 +2,7 @@ Summary:	smtp.proxy is an application level gateway for the SMTP protocol
 Summary(pl):	smtp.proxy jest aplikacyjn± bramk± dla protoko³u SMTP
 Name:		smtpproxy
 Version:	1.1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Networking
 Group(de):	Applikationen/Netzwerkwesen
@@ -10,6 +10,7 @@ Group(pl):	Aplikacje/Sieciowe
 Source0:	http://www.quietsche-entchen.de/download/%{name}-%{version}.tar.gz
 Source1:	%{name}.inetd
 Prereq:		rc-inetd >= 0.8.1
+URL:		http://www.quietsche-entchen.de/software/smtp.proxy.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,7 +61,7 @@ fi
     
 %files
 %defattr(644,root,root,755)
-%doc *gz
+%doc *.gz
 %attr(755,root,root) %{_sbindir}/smtp.proxy
 %{_mandir}/man1/*
 %attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/rc-inetd/smtpproxy
