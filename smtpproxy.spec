@@ -60,6 +60,6 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc README rfc821.txt
-%attr(640,root,root) %config %verify(not size mtime md5) /etc/sysconfig/rc-inetd/smtpproxy
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/rc-inetd/smtpproxy
 %attr(755,root,root) %{_sbindir}/smtp.proxy
 %{_mandir}/man1/*
