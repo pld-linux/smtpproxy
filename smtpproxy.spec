@@ -8,10 +8,11 @@ Group:		Applications/Networking
 Source0:	http://www.quietsche-entchen.de/download/%{name}-%{version}.tar.gz
 # Source0-md5:	c4558c8d379644e5b1fd66c389107a1e
 Source1:	%{name}.inetd
-Prereq:		rc-inetd >= 0.8.1
 URL:		http://www.quietsche-entchen.de/software/smtp.proxy.html
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRequires:	rpmbuild(macros) >= 1.268
+Requires:	rc-inetd >= 0.8.1
 Conflicts:	proxytools
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 smtp.proxy is an application level gateway for the SMTP protocol based
@@ -46,15 +47,11 @@ install %{SOURCE1} $RPM_BUILD_ROOT/etc/sysconfig/rc-inetd/smtpproxy
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ -f /var/lock/subsys/rc-inetd ]; then
-	/etc/rc.d/init.d/rc-inetd reload 1>&2
-else
-	echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start inet server" 1>&2
-fi
+%service -q rc-inetd reload
 
 %postun
-if [ "$1" = "0" -a -f /var/lock/subsys/rc-inetd ]; then
-	/etc/rc.d/init.d/rc-inetd reload
+if [ "$1" = "0" ]; then
+	%service -q rc-inetd reload
 fi
 
 %files
