@@ -1,5 +1,5 @@
 Summary:	An application level gateway for the SMTP protocol
-Summary(pl):	Brama warstwy aplikacji dla protoko³u SMTP
+Summary(pl.UTF-8):   Brama warstwy aplikacji dla protokoÅ‚u SMTP
 Name:		smtpproxy
 Version:	1.1.3
 Release:	3
@@ -20,10 +20,10 @@ on the specification in RFC 821. It also supports some commands that
 came with later RFCs. Unlike generic TCP proxys smtp.proxy looks into
 the data streams it forward and watches over the protocol.
 
-%description -l pl
-smtp.proxy jest aplikacyjn± bramk± dla protoko³u SMTP. W odró¿nieniu
-od innych tego typu programów, smtpproxy nadzoruje transmisjê
-sprawdzaj±c czy klient i serwer spe³niaj± specyfikacjê protoko³u (RFC
+%description -l pl.UTF-8
+smtp.proxy jest aplikacyjnÄ… bramkÄ… dla protokoÅ‚u SMTP. W odrÃ³Å¼nieniu
+od innych tego typu programÃ³w, smtpproxy nadzoruje transmisjÄ™
+sprawdzajÄ…c czy klient i serwer speÅ‚niajÄ… specyfikacjÄ™ protokoÅ‚u (RFC
 821).
 
 %prep
