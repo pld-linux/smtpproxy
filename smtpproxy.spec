@@ -1,5 +1,5 @@
 Summary:	An application level gateway for the SMTP protocol
-Summary(pl.UTF-8):   Brama warstwy aplikacji dla protokołu SMTP
+Summary(pl.UTF-8):	Brama warstwy aplikacji dla protokołu SMTP
 Name:		smtpproxy
 Version:	1.1.3
 Release:	3
