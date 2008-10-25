@@ -4,7 +4,7 @@ Name:		smtpproxy
 Version:	1.1.3
 Release:	3
 License:	GPL
-Group:		Applications/Networking
+Group:		Networking/Daemons/SMTP
 Source0:	http://www.quietsche-entchen.de/download/%{name}-%{version}.tar.gz
 # Source0-md5:	c4558c8d379644e5b1fd66c389107a1e
 Source1:	%{name}.inetd
